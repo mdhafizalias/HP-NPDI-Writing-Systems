@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="860,1058.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="567.3333333333334,1195.3333333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="48">
       <x:String>System.Activities</x:String>
@@ -89,7 +89,7 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="555.2,993.6" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+  <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="554.6666666666666,1130.6666666666667" sap2010:WorkflowViewState.IdRef="SequenceX_1">
     <ueab:SequenceX.Variables>
       <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
       <Variable x:TypeArguments="x:String" Name="Rename_to_png" />
@@ -99,7 +99,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ForEachFileX DisplayName="For Each File in Folder" sap:VirtualizedContainerService.HintSize="512,904" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+    <ui:ForEachFileX DisplayName="For Each File in Folder" sap:VirtualizedContainerService.HintSize="512.6666666666666,916.6666666666666" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
       <ui:ForEachFileX.Body>
         <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
           <ActivityAction.Argument1>
@@ -108,13 +108,13 @@
           <ActivityAction.Argument2>
             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
           </ActivityAction.Argument2>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478.4,648.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478.6666666666667,654.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign DisplayName="Set Variable Value" sap:VirtualizedContainerService.HintSize="435.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign DisplayName="Set Variable Value" sap:VirtualizedContainerService.HintSize="436.6666666666667,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[Rename_to_png]</OutArgument>
               </Assign.To>
@@ -127,16 +127,16 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <ui:RenameFileX DisplayName="Rename File" FilePath="[X_Files.FullName]" sap:VirtualizedContainerService.HintSize="435.2,144" sap2010:WorkflowViewState.IdRef="RenameFileX_6" KeepExtension="False" NewName="[Rename_to_png]" />
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,253.6" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+            <ui:RenameFileX DisplayName="Rename File" FilePath="[X_Files.FullName]" sap:VirtualizedContainerService.HintSize="436.6666666666667,148" sap2010:WorkflowViewState.IdRef="RenameFileX_6" KeepExtension="False" NewName="[Rename_to_png]" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.6666666666667,254" sap2010:WorkflowViewState.IdRef="CommentOut_9">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376.8,175.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,174" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[Rename_to_png]" />
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[Rename_to_png]" />
                 </Sequence>
               </ui:CommentOut.Body>
             </ui:CommentOut>
@@ -149,5 +149,6 @@
         </InArgument>
       </ui:ForEachFileX.Folder>
     </ui:ForEachFileX>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="512.6666666666666,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[string.Format(&quot;Done&quot;)]" />
   </ueab:SequenceX>
 </Activity>
